@@ -30,40 +30,24 @@ public class App {
 
 
     public static void oneMonthCalendar(int tage, int ersterTag)
-    {/*
-        int k =(7-ersterTag)+1;
-        int l =0;
-        if(ersterTag>1) {
-            for (int i = 1; i <= ersterTag;i++) {
-
-                System.out.print(" ");
+    {
+        int i;
+        int day;
+        for (i = 1; i <= ersterTag-1; i++) {
+            System.out.print("   ");
+        }
+        for (day = 1; day <= tage; day++, i++) {
+            if (day < 10) {
+                System.out.printf(" ");
             }
-        }
-        for (int i = 1; i <= (7-ersterTag)+1 ; i++) {
-            l++;
-            System.out.print(l+"  ");
-        }
-        System.out.println();
+            System.out.print(day + " ");
 
-
-        for (int i = 0; i < tage/7; i++) {
-            for (int j = 0; j < 7; j++) {
-                k++;
-                if (k <= 9) {
-                    System.out.print(k+"  ");
-                } else if (k>9) {
-                    System.out.print(k+" ");
-                }
-
-                if (k == tage) {
-                    break;
-                }
-
+            if (i % 7 == 0 && day <= 29) {
+                System.out.println();
             }
-            System.out.println();
-        }
 
-  */  }
+        } System.out.println();
+    }
 
     public static long[] lcg(long seed){
 
